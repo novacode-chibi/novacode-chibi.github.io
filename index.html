@@ -1,149 +1,210 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Dev</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Dev – Noir & Blanc</title>
+  <style>
+    /* ===== RESET & MODE N&B ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#0f172a;
-    color:white;
-}
+    body {
+      background: #000000;        /* noir pur */
+      color: #ffffff;             /* blanc pur */
+      font-family: 'Inter', Arial, sans-serif;
+      line-height: 1.6;
+    }
 
-header{
-    text-align:center;
-    padding:60px 20px;
-}
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-h1{
-    font-size:40px;
-}
+    /* ===== TYPO & ESPACEMENT ===== */
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      border-bottom: 1px solid #222;
+    }
 
-.subtitle{
-    color:#94a3b8;
-}
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:20px;
-}
+    .subtitle {
+      font-size: 1.2rem;
+      color: #aaaaaa;              /* gris moyen */
+      font-weight: 300;
+    }
 
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+    h2 {
+      font-size: 2rem;
+      margin: 50px 0 30px;
+      font-weight: 500;
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+    }
 
-.card{
-    background:#1e293b;
-    padding:20px;
-    border-radius:10px;
-    transition:0.3s;
-}
+    /* ===== GRILLE PROJETS ===== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
 
-.card:hover{
-    transform:translateY(-5px);
-    background:#334155;
-}
+    .card {
+      background: #111111;         /* gris très foncé */
+      padding: 28px 22px;
+      border: 1px solid #222;      /* fine bordure gris foncé */
+      transition: all 0.2s ease;
+    }
 
-button{
-    background:#3b82f6;
-    border:none;
-    padding:10px 15px;
-    border-radius:5px;
-    color:white;
-    cursor:pointer;
-}
+    .card:hover {
+      background: #1a1a1a;         /* un peu plus clair au survol */
+      border-color: #444;
+      transform: translateY(-3px);
+    }
 
-button:hover{
-    background:#2563eb;
-}
+    .card h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#94a3b8;
-}
-</style>
+    .card p {
+      color: #cccccc;              /* gris clair pour le texte secondaire */
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
 
+    /* ===== BOUTONS (unis, sans dégradé) ===== */
+    button {
+      background: #222;
+      border: 1px solid #444;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: white;
+      cursor: pointer;
+      transition: 0.15s;
+      width: fit-content;
+      display: inline-block;
+    }
+
+    button:hover {
+      background: #333;
+      border-color: #666;
+    }
+
+    /* cas particulier du lien contenant le bouton */
+    a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* ===== CONTACT ===== */
+    #msg {
+      margin-top: 20px;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 50px 20px 30px;
+      color: #555;
+      border-top: 1px solid #222;
+      margin-top: 60px;
+    }
+
+    /* ===== AJUSTEMENTS DIVERS ===== */
+    hr {
+      border: none;
+      border-top: 1px solid #222;
+      margin: 30px 0;
+    }
+
+    /* petit message d'information (email copié) */
+    .info-msg {
+      color: #aaa;
+    }
+
+    /* on supprime toute animation de couleur */
+  </style>
 </head>
-
 <body>
 
 <header>
-<h1 id="name">Dev Portfolio</h1>
-<p class="subtitle">Flutter • Python • Open Source</p>
+  <h1>Dev Portfolio</h1>
+  <p class="subtitle">Flutter • Python • Open Source</p>
 </header>
 
-<div class="container">
+<main class="container">
 
-<h2>Mes projets</h2>
+  <h2>Projets en cours</h2>
 
-<div class="projects">
+  <div class="projects">
+    <!-- Carte 1 -->
+    <div class="card">
+      <h3>Anime App</h3>
+      <p>Application Flutter pour suivre les animés saisonniers.</p>
+      <a href="https://github.com/username/anime-app" target="_blank" rel="noopener">
+        <button>Voir le projet</button>
+      </a>
+    </div>
 
-<div class="card">
-<h3>Anime App</h3>
-<p>Application Flutter pour suivre les anime saisonniers.</p>
-<a href="https://github.com/username/anime-app">
-<button>Voir le projet</button>
-</a>
-</div>
+    <!-- Carte 2 -->
+    <div class="card">
+      <h3>Anime API Script</h3>
+      <p>Script Python qui récupère les animés via MyAnimeList API.</p>
+      <a href="https://github.com/username/anime-script" target="_blank" rel="noopener">
+        <button>Voir le projet</button>
+      </a>
+    </div>
 
-<div class="card">
-<h3>Anime API Script</h3>
-<p>Script Python qui récupère les animes via MyAnimeList API.</p>
-<a href="https://github.com/username/anime-script">
-<button>Voir le projet</button>
-</a>
-</div>
+    <!-- Carte 3 -->
+    <div class="card">
+      <h3>Notification System</h3>
+      <p>Système de notifications Flutter avec Firebase.</p>
+      <a href="https://github.com/username/flutter-notification" target="_blank" rel="noopener">
+        <button>Voir le projet</button>
+      </a>
+    </div>
+  </div>
 
-<div class="card">
-<h3>Notification System</h3>
-<p>Système de notifications Flutter avec Firebase.</p>
-<a href="https://github.com/username/flutter-notification">
-<button>Voir le projet</button>
-</a>
-</div>
+  <h2>Contact</h2>
+  <button onclick="copyEmail()">Copier mon email</button>
+  <p id="msg"></p>
 
-</div>
-
-<br>
-
-<h2>Contact</h2>
-
-<button onclick="copyEmail()">Copier mon email</button>
-
-<p id="msg"></p>
-
-</div>
+</main>
 
 <footer>
-© <span id="year"></span> Dev Portfolio
+  © <span id="year"></span> Dev Portfolio — tout en noir & blanc
 </footer>
 
 <script>
+  function copyEmail() {
+    navigator.clipboard.writeText("email@example.com");
+    document.getElementById("msg").innerText = "📋 Email copié !";
+  }
 
-function copyEmail(){
-    navigator.clipboard.writeText("email@example.com")
-    document.getElementById("msg").innerText="Email copié !"
-}
+  // Année automatique
+  document.getElementById("year").innerText = new Date().getFullYear();
 
-document.getElementById("year").innerText=new Date().getFullYear()
-
-// animation titre
-let name=document.getElementById("name")
-let colors=["#3b82f6","#22c55e","#eab308","#ef4444"]
-let i=0
-
-setInterval(()=>{
-    name.style.color=colors[i]
-    i=(i+1)%colors.length
-},1500)
-
+  // Plus d'animation colorée : le titre reste blanc.
+  // Si vous voulez une petite animation sobre (ex: apparition),
+  // vous pouvez ajouter une classe CSS, mais rien de nécessaire ici.
 </script>
 
 </body>
