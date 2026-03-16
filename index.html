@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Dev</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+h1{
+    font-size:40px;
+}
+
+.subtitle{
+    color:#94a3b8;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#334155;
+}
+
+button{
+    background:#3b82f6;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1 id="name">Dev Portfolio</h1>
+<p class="subtitle">Flutter • Python • Open Source</p>
+</header>
+
+<div class="container">
+
+<h2>Mes projets</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Anime App</h3>
+<p>Application Flutter pour suivre les anime saisonniers.</p>
+<a href="https://github.com/username/anime-app">
+<button>Voir le projet</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Anime API Script</h3>
+<p>Script Python qui récupère les animes via MyAnimeList API.</p>
+<a href="https://github.com/username/anime-script">
+<button>Voir le projet</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Notification System</h3>
+<p>Système de notifications Flutter avec Firebase.</p>
+<a href="https://github.com/username/flutter-notification">
+<button>Voir le projet</button>
+</a>
+</div>
+
+</div>
+
+<br>
+
+<h2>Contact</h2>
+
+<button onclick="copyEmail()">Copier mon email</button>
+
+<p id="msg"></p>
+
+</div>
+
+<footer>
+© <span id="year"></span> Dev Portfolio
+</footer>
+
+<script>
+
+function copyEmail(){
+    navigator.clipboard.writeText("email@example.com")
+    document.getElementById("msg").innerText="Email copié !"
+}
+
+document.getElementById("year").innerText=new Date().getFullYear()
+
+// animation titre
+let name=document.getElementById("name")
+let colors=["#3b82f6","#22c55e","#eab308","#ef4444"]
+let i=0
+
+setInterval(()=>{
+    name.style.color=colors[i]
+    i=(i+1)%colors.length
+},1500)
+
+</script>
+
+</body>
+</html>
