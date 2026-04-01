@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Dev – Noir & Blanc</title>
   <style>
-    /* ===== RESET & MODE N&B ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: #000000;        /* noir pur */
-      color: #ffffff;             /* blanc pur */
+      background: #000000;
+      color: #ffffff;
       font-family: 'Inter', Arial, sans-serif;
       line-height: 1.6;
     }
@@ -25,7 +20,6 @@
       padding: 20px;
     }
 
-    /* ===== TYPO & ESPACEMENT ===== */
     header {
       text-align: center;
       padding: 80px 20px 40px;
@@ -37,12 +31,11 @@
       font-weight: 600;
       letter-spacing: -0.02em;
       margin-bottom: 10px;
-      color: #ffffff;
     }
 
     .subtitle {
       font-size: 1.2rem;
-      color: #aaaaaa;              /* gris moyen */
+      color: #aaaaaa;
       font-weight: 300;
     }
 
@@ -54,7 +47,6 @@
       padding-bottom: 10px;
     }
 
-    /* ===== GRILLE PROJETS ===== */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -62,43 +54,37 @@
     }
 
     .card {
-      background: #111111;         /* gris très foncé */
+      background: #111111;
       padding: 28px 22px;
-      border: 1px solid #222;      /* fine bordure gris foncé */
+      border: 1px solid #222;
       transition: all 0.2s ease;
     }
 
     .card:hover {
-      background: #1a1a1a;         /* un peu plus clair au survol */
+      background: #1a1a1a;
       border-color: #444;
       transform: translateY(-3px);
     }
 
     .card h3 {
       font-size: 1.5rem;
-      font-weight: 500;
       margin-bottom: 12px;
-      color: #ffffff;
     }
 
     .card p {
-      color: #cccccc;              /* gris clair pour le texte secondaire */
+      color: #cccccc;
       margin-bottom: 25px;
       font-size: 0.95rem;
     }
 
-    /* ===== BOUTONS (unis, sans dégradé) ===== */
     button {
       background: #222;
       border: 1px solid #444;
       padding: 12px 24px;
       font-size: 0.95rem;
-      font-weight: 500;
       color: white;
       cursor: pointer;
       transition: 0.15s;
-      width: fit-content;
-      display: inline-block;
     }
 
     button:hover {
@@ -106,20 +92,17 @@
       border-color: #666;
     }
 
-    /* cas particulier du lien contenant le bouton */
     a {
       text-decoration: none;
       display: inline-block;
     }
 
-    /* ===== CONTACT ===== */
     #msg {
       margin-top: 20px;
       color: #aaa;
       font-style: italic;
     }
 
-    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 50px 20px 30px;
@@ -127,20 +110,6 @@
       border-top: 1px solid #222;
       margin-top: 60px;
     }
-
-    /* ===== AJUSTEMENTS DIVERS ===== */
-    hr {
-      border: none;
-      border-top: 1px solid #222;
-      margin: 30px 0;
-    }
-
-    /* petit message d'information (email copié) */
-    .info-msg {
-      color: #aaa;
-    }
-
-    /* on supprime toute animation de couleur */
   </style>
 </head>
 <body>
@@ -155,29 +124,26 @@
   <h2>Projets en cours</h2>
 
   <div class="projects">
-    <!-- Carte 1 -->
     <div class="card">
       <h3>Anime App</h3>
       <p>Application Flutter pour suivre les animés saisonniers.</p>
-      <a href="https://github.com/username/anime-app" target="_blank" rel="noopener">
+      <a href="https://github.com/username/anime-app" target="_blank">
         <button>Voir le projet</button>
       </a>
     </div>
 
-    <!-- Carte 2 -->
     <div class="card">
       <h3>Anime API Script</h3>
       <p>Script Python qui récupère les animés via MyAnimeList API.</p>
-      <a href="https://github.com/username/anime-script" target="_blank" rel="noopener">
+      <a href="https://github.com/username/anime-script" target="_blank">
         <button>Voir le projet</button>
       </a>
     </div>
 
-    <!-- Carte 3 -->
     <div class="card">
       <h3>Notification System</h3>
       <p>Système de notifications Flutter avec Firebase.</p>
-      <a href="https://github.com/username/flutter-notification" target="_blank" rel="noopener">
+      <a href="https://github.com/username/flutter-notification" target="_blank">
         <button>Voir le projet</button>
       </a>
     </div>
@@ -199,13 +165,20 @@
     document.getElementById("msg").innerText = "📋 Email copié !";
   }
 
-  // Année automatique
   document.getElementById("year").innerText = new Date().getFullYear();
-
-  // Plus d'animation colorée : le titre reste blanc.
-  // Si vous voulez une petite animation sobre (ex: apparition),
-  // vous pouvez ajouter une classe CSS, mais rien de nécessaire ici.
 </script>
+
+<!-- ===== PUB ===== -->
+<script>
+  atOptions = {
+    'key' : '1d7e74779f7b4a2e1d425e2a0f59a17b',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/1d7e74779f7b4a2e1d425e2a0f59a17b/invoke.js"></script>
 
 </body>
 </html>
