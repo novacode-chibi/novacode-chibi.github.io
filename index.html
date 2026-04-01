@@ -4,14 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Dev – Noir & Blanc</title>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: #000000;
-      color: #ffffff;
+      background: #000;
+      color: #fff;
       font-family: 'Inter', Arial, sans-serif;
       line-height: 1.6;
+    }
+
+    /* ===== PUB TOP ===== */
+    .ad-top {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      background: #000;
+      border-bottom: 1px solid #222;
+      margin-bottom: 20px;
+    }
+
+    .ad-top iframe {
+      max-width: 100%;
+      height: auto;
     }
 
     .container {
@@ -22,20 +40,19 @@
 
     header {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 40px 20px 40px;
       border-bottom: 1px solid #222;
     }
 
     h1 {
       font-size: 3.5rem;
       font-weight: 600;
-      letter-spacing: -0.02em;
       margin-bottom: 10px;
     }
 
     .subtitle {
       font-size: 1.2rem;
-      color: #aaaaaa;
+      color: #aaa;
       font-weight: 300;
     }
 
@@ -54,10 +71,10 @@
     }
 
     .card {
-      background: #111111;
+      background: #111;
       padding: 28px 22px;
       border: 1px solid #222;
-      transition: all 0.2s ease;
+      transition: 0.2s;
     }
 
     .card:hover {
@@ -72,7 +89,7 @@
     }
 
     .card p {
-      color: #cccccc;
+      color: #ccc;
       margin-bottom: 25px;
       font-size: 0.95rem;
     }
@@ -81,7 +98,6 @@
       background: #222;
       border: 1px solid #444;
       padding: 12px 24px;
-      font-size: 0.95rem;
       color: white;
       cursor: pointer;
       transition: 0.15s;
@@ -94,7 +110,6 @@
 
     a {
       text-decoration: none;
-      display: inline-block;
     }
 
     #msg {
@@ -110,9 +125,30 @@
       border-top: 1px solid #222;
       margin-top: 60px;
     }
+
+    /* Responsive mobile */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
   </style>
 </head>
 <body>
+
+<!-- ===== PUB EN HAUT ===== -->
+<div class="ad-top">
+  <script>
+    atOptions = {
+      'key' : '1d7e74779f7b4a2e1d425e2a0f59a17b',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/1d7e74779f7b4a2e1d425e2a0f59a17b/invoke.js"></script>
+</div>
 
 <header>
   <h1>Dev Portfolio</h1>
@@ -127,25 +163,19 @@
     <div class="card">
       <h3>Anime App</h3>
       <p>Application Flutter pour suivre les animés saisonniers.</p>
-      <a href="https://github.com/username/anime-app" target="_blank">
-        <button>Voir le projet</button>
-      </a>
+      <a href="#"><button>Voir le projet</button></a>
     </div>
 
     <div class="card">
       <h3>Anime API Script</h3>
       <p>Script Python qui récupère les animés via MyAnimeList API.</p>
-      <a href="https://github.com/username/anime-script" target="_blank">
-        <button>Voir le projet</button>
-      </a>
+      <a href="#"><button>Voir le projet</button></a>
     </div>
 
     <div class="card">
       <h3>Notification System</h3>
       <p>Système de notifications Flutter avec Firebase.</p>
-      <a href="https://github.com/username/flutter-notification" target="_blank">
-        <button>Voir le projet</button>
-      </a>
+      <a href="#"><button>Voir le projet</button></a>
     </div>
   </div>
 
@@ -167,18 +197,6 @@
 
   document.getElementById("year").innerText = new Date().getFullYear();
 </script>
-
-<!-- ===== PUB ===== -->
-<script>
-  atOptions = {
-    'key' : '1d7e74779f7b4a2e1d425e2a0f59a17b',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/1d7e74779f7b4a2e1d425e2a0f59a17b/invoke.js"></script>
 
 </body>
 </html>
